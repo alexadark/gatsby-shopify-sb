@@ -41,33 +41,7 @@ export const pageQuery = graphql`
       skip: $skip
     ) {
       nodes {
-        title
-        handle
-        shopifyId
-        id
-        media {
-          ... on ShopifyMediaImage {
-            id
-            image {
-              gatsbyImageData
-              altText
-            }
-          }
-        }
-        priceRangeV2 {
-          maxVariantPrice {
-            amount
-            currencyCode
-          }
-          minVariantPrice {
-            amount
-            currencyCode
-          }
-        }
-        variants {
-          shopifyId
-          id
-        }
+        ...ProductCardFragment
       }
     }
   }
