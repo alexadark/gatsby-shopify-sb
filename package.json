@@ -1,0 +1,48 @@
+{
+  "name": "gatsby-shopify-base",
+  "version": "1.0.0",
+  "private": true,
+  "description": "gatsby-shopify-base",
+  "author": "alexandra spalato",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@radix-ui/react-dialog": "^1.0.0",
+    "@radix-ui/react-select": "^1.0.0",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "clsx": "^1.2.1",
+    "framer-motion": "^7.2.1",
+    "gatsby": "^4.22.0",
+    "gatsby-awesome-pagination": "^0.3.8",
+    "gatsby-plugin-emotion": "^7.22.0",
+    "gatsby-plugin-image": "^2.22.0",
+    "gatsby-plugin-sharp": "^4.22.0",
+    "gatsby-source-filesystem": "^4.22.0",
+    "gatsby-source-shopify": "^7.11.0",
+    "gatsby-transformer-sharp": "^4.22.0",
+    "postcss-import": "^15.0.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-hook-form": "^7.34.2",
+    "react-icons": "^4.4.0",
+    "shopify-buy": "^2.16.1",
+    "twin.macro": "^2.8.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "gatsby-plugin-postcss": "^5.22.0",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
+  }
+}

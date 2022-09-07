@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply px-3 py-2 text-white transition duration-300 bg-black cursor-pointer hover:bg-violet-800;
+}
