@@ -1,8 +1,9 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { ProductCard } from "~/components/product";
+import { storyblokEditable } from "gatsby-source-storyblok";
 
-const CategoryGrid = () => {
+const CategoryGrid = ({ blok }) => {
   const HOME_CATEGORY_QUERY = graphql`
     query {
       shopifyCollection(handle: { eq: "frontpage" }) {
