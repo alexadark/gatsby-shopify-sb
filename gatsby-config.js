@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: "gatsby-source-storyblok",
       options: {
-        accessToken: "gQ2wtrJ5isRY9KYQgwQOnQtt",
+        accessToken: process.env.GATSBY_STORYBLOK_ACCESS_TOKEN,
         version: process.env.NODE_ENV === "production" ? "published" : "draft",
         localAssets: true, // Optional parameter to download the images to use with Gatsby Image
       },
