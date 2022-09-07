@@ -44,6 +44,10 @@ export const fragments = graphql`
         }
       }
     }
+    featuredImage {
+      src
+      altText
+    }
     media {
       ... on ShopifyMediaImage {
         image {

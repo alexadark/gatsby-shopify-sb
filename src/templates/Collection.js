@@ -25,6 +25,7 @@ const Collection = ({ data }) => {
                 minVariantPrice: { amount: minPrice, currencyCode: currency },
               },
               media,
+              featuredImage,
               handle,
               variants,
             } = product;
@@ -35,7 +36,8 @@ const Collection = ({ data }) => {
               <div className="border product-card" key={product.handle}>
                 <Link to={`/${handle}`} key={handle}>
                   <div className="product-card__image">
-                    <Image img={media[0].image} />
+                    {/* <Image img={media[0].image} /> */}
+                    <img src={featuredImage.src} alt={featuredImage.atltText} />
                   </div>
                   <div className="p-4 text-center lowercase product-card__info ">
                     <h3 className="font-bold">{title}</h3>

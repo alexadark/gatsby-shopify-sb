@@ -7,7 +7,8 @@ import { useOptions } from "~/hooks/useOptions";
 import { OptionSelector } from "~/components/product";
 
 const ProductPage = ({ data }) => {
-  const { title, description, media, variants, options } = data.shopifyProduct;
+  const { title, description, media, variants, options, featuredImage } =
+    data.shopifyProduct;
   const [quantity, setQuantity] = useState(1);
 
   const { selectedOptions, setSelectedOptions, selectedVariant } = useOptions(
@@ -23,7 +24,8 @@ const ProductPage = ({ data }) => {
       <div className="container items-center gap-10 mx-auto my-10 product md:flex">
         <div className="flex-1 product__image">
           {" "}
-          <Image img={image} />{" "}
+          <img src={featuredImage.src} alt={featuredImage.atltText} />
+          {/* <Image img={image} />{" "} */}
         </div>
         <div className="flex-1 product__info">
           <h1 className="mb-2 font-bold">{title}</h1>
