@@ -19,6 +19,14 @@ module.exports = {
         shopifyConnections: ["collections"], // source product collections too
       },
     },
+    {
+      resolve: "gatsby-source-storyblok",
+      options: {
+        accessToken: "gQ2wtrJ5isRY9KYQgwQOnQtt",
+        version: process.env.NODE_ENV === "production" ? "published" : "draft",
+        localAssets: true, // Optional parameter to download the images to use with Gatsby Image
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",

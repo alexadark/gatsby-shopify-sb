@@ -30,6 +30,7 @@
     "gatsby-plugin-sharp": "^4.22.0",
     "gatsby-source-filesystem": "^4.22.0",
     "gatsby-source-shopify": "^7.11.0",
+    "gatsby-source-storyblok": "^4.1.0",
     "gatsby-transformer-sharp": "^4.22.0",
     "postcss-import": "^15.0.0",
     "react": "^18.1.0",
