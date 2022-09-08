@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "~/components/Layout";
 // import Hero from "~/components/Hero";
-import CategoryGrid from "~/components/CategoryGrid";
+// import CategoryGrid from "~/components/CategoryGrid";
 import { graphql } from "gatsby";
 import {
   useStoryblokState,
@@ -11,7 +11,9 @@ import {
 
 const HomePage = ({ data }) => {
   let story = data.storyblokEntry;
-  story = useStoryblokState(story);
+  story = useStoryblokState(story, {
+    resolveRelations: "featured-products.product",
+  });
   console.log("story", story);
 
   const components = story.content.body?.map((blok) => (
