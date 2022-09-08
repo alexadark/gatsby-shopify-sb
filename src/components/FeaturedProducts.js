@@ -29,10 +29,10 @@ const ALL_PRODUCTS_QUERY = graphql`
 
 const FeaturedProducts = ({ blok }) => {
   const { headline, products } = blok;
-  console.log("blok products", blok);
+
   const data = useStaticQuery(ALL_PRODUCTS_QUERY);
   const allProducts = data.allShopifyProduct.nodes;
-  console.log("allProducts", allProducts);
+
   return (
     <div
       key={blok._uid}
@@ -54,7 +54,7 @@ const FeaturedProducts = ({ blok }) => {
           } = product;
           const price =
             maxPrice === minPrice ? `${minPrice}` : `from ${minPrice}`;
-          console.log("product", product);
+
           return (
             <div className="border product-card">
               <Link to={`/${handle}`} key={id}>

@@ -1,31 +1,53 @@
 import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
 import { ProductCard } from "~/components/product";
 import { storyblokEditable } from "gatsby-source-storyblok";
+import { useStaticQuery, Link, graphql } from "gatsby";
+import { Image } from "~/components/ui-components";
 
 const CategoryGrid = ({ blok }) => {
   console.log("blok", blok);
-  const HOME_CATEGORY_QUERY = graphql`
+  const { headline, categories } = blok;
+
+  const ALL_COLLECTIONS_QUERY = graphql`
     query {
-      shopifyCollection(handle: { eq: "frontpage" }) {
-        description
-        products {
-          ...ProductCardFragment
+      allShopifyCollection(limit: 100) {
+        nodes {
+          handle
+          id
+          image {
+            gatsbyImageData
+          }
+          title
         }
       }
     }
   `;
-  const data = useStaticQuery(HOME_CATEGORY_QUERY);
-  const { products, description } = data.shopifyCollection;
+  const data = useStaticQuery(ALL_COLLECTIONS_QUERY);
+  const allCollections = data.allShopifyCollection.nodes;
   return (
-    <div className="py-20" key={blok._uid} {...storyblokEditable(blok)}>
-      <div className="container max-w-4xl mx-auto mb-10 text-3xl font-bold text-center">
-        {description}
-      </div>
-      <div className="container grid gap-5 mx-auto sm:grid-cols-2 md:grid-cols-3">
-        {products.map((product) => (
-          <ProductCard product={product} key={product.handle} />
-        ))}
+    <div
+      className="container py-20 mx-auto "
+      key={blok._uid}
+      {...storyblokEditable(blok)}
+    >
+      <h2 className="mb-5 text-5xl font-bold text-center">{headline}</h2>
+      <div className="grid gap-5 mx-auto md:grid-cols-2">
+        {categories.items?.map((sbCategory) => {
+          const { name, id } = sbCategory;
+          const collection = allCollections.find((c) => c.title === name);
+          const { handle, image } = collection;
+
+          return (
+            <Link key={id} to={`/collections/${handle}`}>
+              <div className="relative">
+                {image && <Image img={image} className="aspect-square" />}
+                <div className="absolute inset-0 flex items-center justify-center w-full h-full">
+                  <h3 className="text-5xl font-bold text-white ">{name}</h3>
+                </div>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
