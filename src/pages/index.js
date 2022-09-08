@@ -44,6 +44,9 @@ export const pageQuery = graphql`
       content
       full_slug
       slug
+      uuid
+      id
+      internalId
     }
   }
 `;
