@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby";
-import { Layout } from "~/components/Layout";
+import Layout from "~/components/Layout";
 import { Image } from "~/components/ui-components/Image";
 import { ButtonAddToCart, QuantityControls } from "~/components/shoppingCart";
 import { useOptions } from "~/hooks/useOptions";

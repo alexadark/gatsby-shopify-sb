@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { StoreContext } from "~/context/StoreContext";
-import { Layout } from "~/components/Layout";
+import Layout from "~/components/Layout";
 import { CartItem, Coupons } from "~/components/shoppingCart";
 
 const CartPage = () => {

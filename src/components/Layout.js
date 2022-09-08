@@ -17,7 +17,7 @@ storyblokInit({
   },
 });
 
-export const Layout = ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <div>
       <Header />
@@ -25,3 +25,5 @@ export const Layout = ({ children }) => {
     </div>
   );
 };
+
+export default Layout;

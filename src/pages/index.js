@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout } from "~/components/Layout";
+import Layout from "~/components/Layout";
 // import Hero from "~/components/Hero";
 // import CategoryGrid from "~/components/CategoryGrid";
 import { graphql } from "gatsby";
