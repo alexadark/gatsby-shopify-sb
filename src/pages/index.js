@@ -29,7 +29,7 @@ const HomePage = ({ data }) => {
         /> */}
         {components}
       </div>
-      <CategoryGrid />
+      {/* <CategoryGrid /> */}
     </Layout>
   );
 };

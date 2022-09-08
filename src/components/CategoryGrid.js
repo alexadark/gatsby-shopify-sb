@@ -4,6 +4,7 @@ import { ProductCard } from "~/components/product";
 import { storyblokEditable } from "gatsby-source-storyblok";
 
 const CategoryGrid = ({ blok }) => {
+  console.log("blok", blok);
   const HOME_CATEGORY_QUERY = graphql`
     query {
       shopifyCollection(handle: { eq: "frontpage" }) {
@@ -17,7 +18,7 @@ const CategoryGrid = ({ blok }) => {
   const data = useStaticQuery(HOME_CATEGORY_QUERY);
   const { products, description } = data.shopifyCollection;
   return (
-    <div className="py-20">
+    <div className="py-20" key={blok._uid} {...storyblokEditable(blok)}>
       <div className="container max-w-4xl mx-auto mb-10 text-3xl font-bold text-center">
         {description}
       </div>
