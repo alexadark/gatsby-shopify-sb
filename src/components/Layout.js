@@ -4,7 +4,7 @@ import { storyblokInit, apiPlugin } from "gatsby-source-storyblok";
 import Hero from "~/components/Hero";
 import CategoryGrid from "~/components/CategoryGrid";
 import Grid from "~/components/Grid";
-import FeaturedProducts from "~/components/FeaturedProducts";
+import ProductsGrid from "~/components/ProductsGrid";
 
 storyblokInit({
   accessToken: process.env.GATSBY_STORYBLOK_ACCESS_TOKEN,
@@ -13,7 +13,7 @@ storyblokInit({
     hero: Hero,
     grid: Grid,
     "category-grid": CategoryGrid,
-    "featured-products": FeaturedProducts,
+    "products-grid": ProductsGrid,
   },
 });
 

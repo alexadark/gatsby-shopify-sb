@@ -27,7 +27,7 @@ const ALL_PRODUCTS_QUERY = graphql`
   }
 `;
 
-const FeaturedProducts = ({ blok }) => {
+const ProductsGrid = ({ blok }) => {
   const { headline, products } = blok;
 
   const data = useStaticQuery(ALL_PRODUCTS_QUERY);
@@ -83,4 +83,4 @@ const FeaturedProducts = ({ blok }) => {
   );
 };
 
-export default FeaturedProducts;
+export default ProductsGrid;

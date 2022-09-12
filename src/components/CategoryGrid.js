@@ -1,5 +1,4 @@
 import React from "react";
-import { ProductCard } from "~/components/product";
 import { storyblokEditable } from "gatsby-source-storyblok";
 import { useStaticQuery, Link, graphql } from "gatsby";
 import { Image } from "~/components/ui-components";
