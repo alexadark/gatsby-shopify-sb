@@ -5,6 +5,7 @@ import Hero from "~/components/Hero";
 import CategoryGrid from "~/components/CategoryGrid";
 import Grid from "~/components/Grid";
 import ProductsGrid from "~/components/ProductsGrid";
+import SingleProduct from "~/components/SingleProduct";
 
 storyblokInit({
   accessToken: process.env.GATSBY_STORYBLOK_ACCESS_TOKEN,
@@ -14,6 +15,7 @@ storyblokInit({
     grid: Grid,
     "category-grid": CategoryGrid,
     "products-grid": ProductsGrid,
+    "single-product": SingleProduct,
   },
 });
 
