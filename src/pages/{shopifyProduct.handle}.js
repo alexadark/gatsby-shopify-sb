@@ -23,9 +23,7 @@ const ProductPage = ({ data }) => {
     <Layout>
       <div className="container items-center gap-10 mx-auto my-10 product md:flex">
         <div className="flex-1 product__image">
-          {" "}
-          <img src={featuredImage.src} alt={featuredImage.atltText} />
-          {/* <Image img={image} />{" "} */}
+          <Image img={image} />
         </div>
         <div className="flex-1 product__info">
           <h1 className="mb-2 font-bold">{title}</h1>

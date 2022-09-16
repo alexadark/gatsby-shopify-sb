@@ -30,14 +30,14 @@ const CategoryGrid = ({ blok }) => {
       {...storyblokEditable(blok)}
     >
       <h2 className="mb-5 text-5xl font-bold text-center">{headline}</h2>
-      <div className="grid gap-5 mx-auto md:grid-cols-2">
+      <div className="justify-center gap-5 mx-auto md:flex">
         {categories.items?.map((sbCategory) => {
           const { name, id } = sbCategory;
           const collection = allCollections.find((c) => c.title === name);
           const { handle, image } = collection;
 
           return (
-            <Link key={id} to={`/collections/${handle}`}>
+            <Link key={id} to={`/collections/${handle}`} className="flex-1">
               <div className="relative">
                 {image && <Image img={image} className="aspect-square" />}
                 <div className="absolute inset-0 flex items-center justify-center w-full h-full">

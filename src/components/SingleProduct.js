@@ -3,8 +3,12 @@ import { storyblokEditable } from "gatsby-source-storyblok";
 
 const SingleProduct = ({ blok }) => {
   const { _uid, headline, description, layout, product } = blok;
-  const selectedProduct = product.items[0];
-  const { image, name, description: productDescription } = selectedProduct;
+  const selectedProduct = product?.items && product?.items[0];
+  const {
+    image,
+    name,
+    description: productDescription,
+  } = selectedProduct || {};
   console.log("selectedProduct", selectedProduct);
   return (
     <div

@@ -38,6 +38,7 @@
     "react-hook-form": "^7.34.2",
     "react-icons": "^4.4.0",
     "shopify-buy": "^2.16.1",
+    "storyblok-rich-text-react-renderer": "^2.6.0",
     "twin.macro": "^2.8.2"
   },
   "devDependencies": {

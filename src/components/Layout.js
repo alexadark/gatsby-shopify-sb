@@ -6,6 +6,7 @@ import CategoryGrid from "~/components/CategoryGrid";
 import Grid from "~/components/Grid";
 import ProductsGrid from "~/components/ProductsGrid";
 import SingleProduct from "~/components/SingleProduct";
+import Text from "~/components/Text";
 
 storyblokInit({
   accessToken: process.env.GATSBY_STORYBLOK_ACCESS_TOKEN,
@@ -13,6 +14,7 @@ storyblokInit({
   components: {
     hero: Hero,
     grid: Grid,
+    text: Text,
     "category-grid": CategoryGrid,
     "products-grid": ProductsGrid,
     "single-product": SingleProduct,

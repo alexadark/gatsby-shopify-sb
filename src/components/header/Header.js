@@ -26,7 +26,7 @@ export const Header = () => {
   return (
     <header className="py-4 text-white bg-black">
       <div className="container flex items-center justify-between mx-auto">
-        <h1>
+        <h1 className="text-xl font-semibold">
           <Link to="/">Gatsby - Shopify</Link>
         </h1>
         <nav>
@@ -45,8 +45,14 @@ export const Header = () => {
         </nav>
         {/* <Cart /> */}
         <Link to="/cart">
-          <div className="text-white">{qty}</div>
-          <CartIcon />
+          <div className="relative ">
+            {qty > 0 && (
+              <div className="absolute flex items-center justify-center w-5 h-5 text-white bg-teal-500 rounded-full left-3 bottom-3">
+                {qty}
+              </div>
+            )}
+            <CartIcon className="text-2xl" />
+          </div>
         </Link>
       </div>
     </header>
